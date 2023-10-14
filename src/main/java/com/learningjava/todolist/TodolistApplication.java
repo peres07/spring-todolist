@@ -1,4 +1,4 @@
-package com.rocketseatcourse.todolist;
+package com.learningjava.todolist;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

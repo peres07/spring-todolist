@@ -1,4 +1,4 @@
-package com.rocketseatcourse.todolist.task;
+package com.learningjava.todolist.task;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

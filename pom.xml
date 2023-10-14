@@ -8,9 +8,9 @@
 		<version>3.1.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.rocketseatcourse</groupId>
+	<groupId>com.learningjava</groupId>
 	<artifactId>todolist</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>todolist</name>
 	<description>Projeto TodoList</description>
 	<properties>

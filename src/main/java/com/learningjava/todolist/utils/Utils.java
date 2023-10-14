@@ -1,4 +1,4 @@
-package com.rocketseatcourse.todolist.utils;
+package com.learningjava.todolist.utils;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeanWrapper;

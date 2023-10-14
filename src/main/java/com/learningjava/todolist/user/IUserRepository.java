@@ -1,4 +1,4 @@
-package com.rocketseatcourse.todolist.user;
+package com.learningjava.todolist.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

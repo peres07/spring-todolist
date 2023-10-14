@@ -1,7 +1,7 @@
-package com.rocketseatcourse.todolist.filter;
+package com.learningjava.todolist.filter;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
-import com.rocketseatcourse.todolist.user.IUserRepository;
+import com.learningjava.todolist.user.IUserRepository;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

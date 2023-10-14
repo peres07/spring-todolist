@@ -1,6 +1,7 @@
-package com.rocketseatcourse.todolist.user;
+package com.learningjava.todolist.user;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
+import com.learningjava.todolist.response.ResponseModal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,17 +16,22 @@ public class UserController {
     @Autowired
     private IUserRepository userRepository;
 
-    @PostMapping({"/", ""})
-    public ResponseEntity<?> create(@RequestBody UserModal userModal) {
+    @PostMapping({"/create"})
+    public ResponseEntity<?> create(@RequestBody UserModal userModal, ResponseModal responseModal) {
         var user = this.userRepository.findByUsername(userModal.getUsername());
 
         if(user != null) {
-            return ResponseEntity.status(400).body("Usuário já existe.");
+            responseModal.setMessage("Usuário já existe.");
+            responseModal.setStatusCode(409);
+            return ResponseEntity.status(responseModal.getStatusCode()).body(responseModal);
         }
 
         userModal.setPassword(BCrypt.withDefaults().hashToString(12, userModal.getPassword().toCharArray()));
 
-        return ResponseEntity.status(201).body(this.userRepository.save(userModal));
+        responseModal.setData((Object) this.userRepository.save(userModal));
+        responseModal.setMessage("Usuário criado com sucesso.");
+        responseModal.setStatusCode(201);
+        return ResponseEntity.status(responseModal.getStatusCode()).body(responseModal);
 
     }
 }
