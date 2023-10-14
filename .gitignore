@@ -1,6 +1,6 @@
 HELP.md
 target/
-docker/
+docker-db/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
