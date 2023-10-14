@@ -1,4 +1,4 @@
-package com.learningjava.todolist.errors;
+package com.learningjava.todolist.controllers;
 
 import com.learningjava.todolist.response.ResponseModal;
 import org.springframework.http.ResponseEntity;
