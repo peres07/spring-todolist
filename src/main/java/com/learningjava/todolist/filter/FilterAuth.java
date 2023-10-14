@@ -1,7 +1,7 @@
 package com.learningjava.todolist.filter;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
-import com.learningjava.todolist.user.IUserRepository;
+import com.learningjava.todolist.repository.IUserRepository;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.Base64;
 
 @Component
-public class FilterTaskAuth extends OncePerRequestFilter {
+public class FilterAuth extends OncePerRequestFilter {
 
     @Autowired
     private IUserRepository userRepository;
@@ -21,7 +21,7 @@ public class FilterTaskAuth extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
-        if (request.getServletPath().startsWith("/tasks/")) {
+        if (request.getServletPath().startsWith("/tasks/") || request.getServletPath().equals("/users/login")) {
 
             var authorization = request.getHeader("Authorization");
             var authEncoded = authorization.substring("Basic".length()).trim();

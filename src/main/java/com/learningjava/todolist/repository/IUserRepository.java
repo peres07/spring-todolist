@@ -1,5 +1,6 @@
-package com.learningjava.todolist.user;
+package com.learningjava.todolist.repository;
 
+import com.learningjava.todolist.entity.UserModal;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

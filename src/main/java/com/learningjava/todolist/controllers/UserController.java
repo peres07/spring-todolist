@@ -1,7 +1,10 @@
-package com.learningjava.todolist.user;
+package com.learningjava.todolist.controllers;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.learningjava.todolist.response.ResponseModal;
+import com.learningjava.todolist.repository.IUserRepository;
+import com.learningjava.todolist.entity.UserModal;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,4 +37,10 @@ public class UserController {
         return ResponseEntity.status(responseModal.getStatusCode()).body(responseModal);
 
     }
+
+    @PostMapping({"/login"})
+    public ResponseEntity login(HttpServletRequest request, ResponseModal responseModal) {
+        return null;
+    }
+
 }

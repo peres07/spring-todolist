@@ -1,5 +1,6 @@
-package com.learningjava.todolist.task;
+package com.learningjava.todolist.repository;
 
+import com.learningjava.todolist.entity.TaskModal;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.learningjava.todolist.task;
+package com.learningjava.todolist.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
